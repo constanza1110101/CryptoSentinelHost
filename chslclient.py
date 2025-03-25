@@ -1,6 +1,3 @@
-Here's an improved version of the crypto host script with enhanced security features and better UI:
-
-```python
 import socket
 import ssl
 import json
