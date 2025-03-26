@@ -1,6 +1,5 @@
 CryptoSentinel
-Secure Cryptocurrency Transaction Server
-CryptoSentinel is a high-security cryptocurrency transaction server designed for financial institutions and crypto businesses. It provides a robust framework for handling cryptocurrency payments, swaps, and withdrawals with enterprise-grade security measures.
+Secure Cryptocurrency Transaction Server designed for financial institutions and crypto businesses. It provides a robust framework for handling cryptocurrency payments, swaps, and withdrawals with enterprise-grade security measures.
 
 Features
 End-to-End Encryption: All communications secured with TLS 1.2/1.3 using strong cipher suites
@@ -17,13 +16,39 @@ OpenSSL 1.1.1+
 2GB RAM minimum (4GB+ recommended)
 50MB disk space (plus storage for logs and database)
 Installation
-Clone the repository: git clone https://github.com/your-organization/cryptosentinel.git
-Install dependencies: pip install -r requirements.txt
-Generate SSL certificates: openssl req -x509 -newkey rsa:4096 -keyout server.key -out server.crt -days 365 -nodes
-Configure environment variables (optional): export SENTINEL_AUTH_TOKEN="your_secure_token"
+Clone the repository:
+
+bash
+
+Hide
+git clone https://github.com/your-organization/cryptosentinel.git
+Install dependencies:
+
+bash
+
+Hide
+pip install -r requirements.txt
+Generate SSL certificates:
+
+bash
+
+Hide
+openssl req -x509 -newkey rsa:4096 -keyout server.key -out server.crt -days 365 -nodes
+Configure environment variables (optional):
+
+bash
+
+Hide
+export SENTINEL_AUTH_TOKEN="your_secure_token"
 Quick Start
-Start the server: python sentinel_server.py
+Start the server:
+
+bash
+
+Hide
+python sentinel_server.py
 The server will run on port 5000 by default (configurable)
+
 Configuration Options
 Environment Variable	Description	Default
 SENTINEL_AUTH_TOKEN	Authentication token for API requests	Random generated token
@@ -51,4 +76,16 @@ Rate limit exceeded: Reduce request frequency or increase RATE_LIMIT
 Database errors: Check disk space and permissions
 For security issues or technical support, contact security@cryptosentinel.io
 
+License
+MIT License
+
+Copyright (c) 2025
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Warning
 WARNING: Never store private keys or sensitive credentials directly in the code. Always use secure key management solutions in production environments.
